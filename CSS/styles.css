@@ -1,5 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* Variables globales */
+:root {
+    --color-primario: #ECDFCC;
+    --color-secundario: #1E201E;
+    --color-terciario: #3C3D37;
+    --color-cuaternario: #697565;
+    --color-fuente-letra: #F6F6F6;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+/* Estilos globales */
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+/* Estilos de la cabecera */
+.cabecera-pagina {
+    height: 10%;
+    padding: 1.5rem; /* 24px, ajustado a un valor de rem para el padding uniforme */
+    display: flex;
+    background-color: var(--color-secundario);
+}
+
+.cabecera-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* 40px */
+}
+
+.menu-link {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-fuente-letra);
+    text-decoration: none;
+    border: 2px solid var(--color-terciario);
+    border-radius: 0.5rem; /* 8px */
+    width: 10rem; /* 160px */
+    text-align: center;
+    padding: 0.625rem 0.3125rem; /* 10px 5px */
+    display: flex;
+    gap: 0.3125rem; /* 5px */
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-link:hover {
+    background-color: var(--color-terciario);
+}
+
+/* Estilos del main container */
+.container-main {
+    height: 80%;
+    padding: 1.5rem; /* 24px, ajustado para mantener el padding uniforme */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5.125rem; /* 82px */
+}
+
+.container-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 1.25rem; /* 20px */
+    justify-content: space-between;
+    background-color: var(--color-primario);
+}
+
+.container-entrada {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem; /* 25px */
+}
+
+.input-texto-entrada {
+    height: 100%;
+    user-select: text;
+    resize: none;
+    border-radius: 0.9375rem; /* 15px */
+    font-family: var(--fuente-montserrat);
+    font-size: 2rem;
+    padding: 0.5rem; /* 8px */
+    background-color: var(--color-fuente-letra);
+}
+
+#exclamacion {
+    background-color: var(--color-terciario);
+    border-radius: 100%;
+    padding: 0.0625rem; /* 1px */
+    color: #000000;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.25rem; /* 20px */
+    height: 1.25rem; /* 20px */
+}
+
+.container-acciones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-encriptar-1, .btn-desencriptar-2 {
+    width: 26.75rem; /* 428px */
+    height: 4.1875rem; /* 67px */
+    border-radius: 1.5rem; /* 24px */
+    padding: 0.5rem 1.5rem; /* 8px 24px */
+    border: none;
+    color: var(--color-fuente-letra);
+    font-family: var(--fuente-montserrat);
+    font-size: 1.125rem; /* 18px */
+}
+
+.btn-encriptar-1 {
+    background-color: var(--color-cuaternario);
+}
+
+.btn-desencriptar-2 {
+    background-color: var(--color-terciario);
+}
+
+/* Estilos de la salida */
+.output-texto-salida {
+    width: 25rem; /* 400px */
+    height: 100%;
+    border-radius: 0.9375rem; /* 15px */
+    font-family: var(--fuente-montserrat);
+    font-size: 2rem;
+    background-color: var(--color-fuente-letra);
+    border: 0.5px solid var(--color-terciario);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.25rem; /* 20px */
+    color: var(--color-secundario);
+}
+
+.palabra-encriptada {
+    display: none;
+}
+
+.img-output {
+    width: 14.75rem; /* 236px */
+    height: 11.0625rem; /* 177px */
+    padding: 0.625rem; /* 10px */
+    display: flex;
+    align-items: center;
+    border-radius: 1.5rem; /* 24px */
+}
+
+.title-output {
+    font-family: var(--fuente-krona);
+    font-size: 1.375rem; /* 22px */
+    text-align: center;
+}
+
+.parrafo-output {
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem; /* 16px */
+    text-align: center;
+}
+
+.btn-copiar-output {
+    width: 21rem; /* 336px */
+    height: 4.1875rem; /* 67px */
+    border-radius: 1.5rem; /* 24px */
+    padding: 0.5rem 1.5rem; /* 8px 24px */
+    display: none;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.125rem; /* 18px */
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-terciario);
+}
+
+/* Estilos del pie de página */
+.pie-de-pagina {
+    height: 10%;
+    padding: 1.5rem; /* 24px, ajustado para mantener el padding uniforme */
+    display: flex;
+    background-color: var(--color-secundario);
+    color: var(--color-fuente-letra);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pie-pagina-link {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-fuente-letra);
+    text-decoration: none;
+    border: 2px solid var(--color-terciario);
+    border-radius: 0.5rem; /* 8px */
+    width: 10rem; /* 160px */
+    text-align: center;
+    padding: 0.625rem 0.3125rem; /* 10px 5px */
+    display: flex;
+    gap: 0.3125rem; /* 5px */
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina-link:hover {
+    background-color: var(--color-terciario);
+}
+
+.parrafo-parrafo {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
