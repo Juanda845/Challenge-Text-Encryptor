@@ -6,6 +6,7 @@
     --color-secundario: #1E201E;
     --color-terciario: #3C3D37;
     --color-cuaternario: #697565;
+    --color-quinto: #FF0000;
     --color-fuente-letra: #F6F6F6;
 
     --fuente-montserrat: "Montserrat", sans-serif;
@@ -28,7 +29,7 @@ body {
 /* Estilos de la cabecera */
 .cabecera-pagina {
     height: 10%;
-    padding: 1.5rem; /* 24px, ajustado a un valor de rem para el padding uniforme */
+    padding: 1.5rem;
     display: flex;
     background-color: var(--color-secundario);
 }
@@ -36,7 +37,7 @@ body {
 .cabecera-menu {
     display: flex;
     align-items: center;
-    gap: 2.5rem; /* 40px */
+    gap: 2.5rem;
 }
 
 .menu-link {
@@ -46,12 +47,12 @@ body {
     color: var(--color-fuente-letra);
     text-decoration: none;
     border: 2px solid var(--color-terciario);
-    border-radius: 0.5rem; /* 8px */
-    width: 10rem; /* 160px */
+    border-radius: 0.5rem;
+    width: 10rem;
     text-align: center;
-    padding: 0.625rem 0.3125rem; /* 10px 5px */
+    padding: 0.625rem 0.3125rem;
     display: flex;
-    gap: 0.3125rem; /* 5px */
+    gap: 0.3125rem;
     justify-content: center;
     align-items: center;
 }
@@ -63,18 +64,18 @@ body {
 /* Estilos del main container */
 .container-main {
     height: 80%;
-    padding: 1.5rem; /* 24px, ajustado para mantener el padding uniforme */
+    padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5.125rem; /* 82px */
+    gap: 5.125rem;
 }
 
 .container-section {
     height: 100%;
     width: 100%;
     display: flex;
-    gap: 1.25rem; /* 20px */
+    gap: 1.25rem;
     justify-content: space-between;
     background-color: var(--color-primario);
 }
@@ -83,62 +84,87 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5625rem; /* 25px */
+    gap: 1.5625rem;
 }
 
 .input-texto-entrada {
     height: 100%;
     user-select: text;
     resize: none;
-    border-radius: 0.9375rem; /* 15px */
+    border-radius: 0.9375rem;
     font-family: var(--fuente-montserrat);
     font-size: 2rem;
-    padding: 0.5rem; /* 8px */
+    padding: 0.5rem;
     background-color: var(--color-fuente-letra);
 }
 
 #exclamacion {
     background-color: var(--color-terciario);
     border-radius: 100%;
-    padding: 0.0625rem; /* 1px */
+    padding: 0.0625rem;
     color: #000000;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 1.25rem; /* 20px */
-    height: 1.25rem; /* 20px */
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 .container-acciones {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
-.btn-encriptar-1, .btn-desencriptar-2 {
-    width: 26.75rem; /* 428px */
-    height: 4.1875rem; /* 67px */
-    border-radius: 1.5rem; /* 24px */
-    padding: 0.5rem 1.5rem; /* 8px 24px */
+.btn-encriptar-1,
+.btn-desencriptar-2,
+.btn-limpiar-3 {
+    width: 290px;
+    height: 4.1875rem;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem;
     border: none;
     color: var(--color-fuente-letra);
     font-family: var(--fuente-montserrat);
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
 }
 
 .btn-encriptar-1 {
     background-color: var(--color-cuaternario);
 }
 
+.btn-encriptar-1:hover {
+    background-color: var(--color-primario);
+    color: #000000;
+    border: 1px solid #000000;
+}
+
 .btn-desencriptar-2 {
     background-color: var(--color-terciario);
 }
 
+.btn-desencriptar-2:hover {
+    background-color: var(--color-primario);
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.btn-limpiar-3 {
+    background-color: var(--color-quinto);
+}
+
+.btn-limpiar-3:hover {
+    background-color: var(--color-primario);
+    color: #000000;
+    border: 1px solid #000000;
+}
+
 /* Estilos de la salida */
 .output-texto-salida {
-    width: 25rem; /* 400px */
+    width: 25rem;
     height: 100%;
-    border-radius: 0.9375rem; /* 15px */
+    border-radius: 0.9375rem;
     font-family: var(--fuente-montserrat);
     font-size: 2rem;
     background-color: var(--color-fuente-letra);
@@ -147,51 +173,53 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 1.25rem; /* 20px */
+    gap: 1.25rem;
     color: var(--color-secundario);
 }
 
-.palabra-encriptada {
-    display: none;
-}
-
 .img-output {
-    width: 14.75rem; /* 236px */
-    height: 11.0625rem; /* 177px */
-    padding: 0.625rem; /* 10px */
+    width: 14.75rem;
+    height: 11.0625rem;
+    padding: 0.625rem;
     display: flex;
     align-items: center;
-    border-radius: 1.5rem; /* 24px */
+    border-radius: 1.5rem;
 }
 
 .title-output {
     font-family: var(--fuente-krona);
-    font-size: 1.375rem; /* 22px */
+    font-size: 1.375rem;
     text-align: center;
 }
 
 .parrafo-output {
     font-family: var(--fuente-montserrat);
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
     text-align: center;
 }
 
 .btn-copiar-output {
-    width: 21rem; /* 336px */
-    height: 4.1875rem; /* 67px */
-    border-radius: 1.5rem; /* 24px */
-    padding: 0.5rem 1.5rem; /* 8px 24px */
+    margin-top: auto;
+    margin-bottom: 15px;
+    width: 21rem;
+    height: 4.1875rem;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem;
     display: none;
     font-family: var(--fuente-montserrat);
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
     background-color: var(--color-primario);
     border: 1px solid var(--color-terciario);
+}
+
+.btn-copiar-output:hover {
+    background-color: var(--color-fuente-letra);
 }
 
 /* Estilos del pie de página */
 .pie-de-pagina {
     height: 10%;
-    padding: 1.5rem; /* 24px, ajustado para mantener el padding uniforme */
+    padding: 1.5rem;
     display: flex;
     background-color: var(--color-secundario);
     color: var(--color-fuente-letra);
@@ -206,12 +234,12 @@ body {
     color: var(--color-fuente-letra);
     text-decoration: none;
     border: 2px solid var(--color-terciario);
-    border-radius: 0.5rem; /* 8px */
-    width: 10rem; /* 160px */
+    border-radius: 0.5rem;
+    width: 10rem;
     text-align: center;
-    padding: 0.625rem 0.3125rem; /* 10px 5px */
+    padding: 0.625rem 0.3125rem;
     display: flex;
-    gap: 0.3125rem; /* 5px */
+    gap: 0.3125rem;
     justify-content: center;
     align-items: center;
 }
@@ -224,4 +252,146 @@ body {
     font-family: var(--fuente-montserrat);
     font-size: 1.1rem;
     font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+.instrucciones {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-fuente-letra);
+    color: #000000;
+    border-radius: 20px;
+    border: 2px solid var(--color-secundario);
+}
+
+.titulo-instrucciones {
+    font-family: var(--fuente-krona);
+    text-align: center;
+    font-size: 3rem;
+}
+
+.parrafo-instrucciones {
+    font-family: var(--fuente-krona);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 9px;
+}
+
+@media (max-width: 1200px) {
+    .container-main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .container-section {
+        flex-direction: column;
+    }
+
+    .container-entrada,
+    .container-resultado {
+        width: 100%;
+        height: auto;
+    }
+
+    .input-texto-entrada {
+        font-size: 1 .5rem;
+        height: 20rem;
+        resize: vertical;
+    }
+
+    .container-acciones {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btn-encriptar-1,
+    .btn-desencriptar-2,
+    .btn-limpiar-3 {
+        width: 100%;
+        font-size: 0.875rem;
+        height: 3rem;
+        padding: 0.25rem 1rem;
+    }
+
+    .output-texto-salida {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+
+    }
+
+    .img-output {
+        width: 80%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .title-output {
+        font-size: 1.125rem;
+    }
+
+    .parrafo-output {
+        font-size: 0.875rem;
+    }
+
+    .btn-copiar-output {
+        display: none;
+        width: 100%;
+        font-size: 0.875rem;
+        height: 3rem;
+        padding: 0.25rem 1rem;
+        margin-top: 1rem;
+    }
+
+    .titulo-instrucciones {
+        font-size: 1.5rem;
+    }
+
+    .parrafo-instrucciones {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .cabecera-pagina {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .cabecera-menu {
+        flex-direction: row;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu-link {
+        width: auto;
+        font-size: 0.875rem;
+    }
+
+    .pie-de-pagina {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .pie-pagina-link {
+        width: auto;
+        margin: 0.5rem;
+    }
 }
