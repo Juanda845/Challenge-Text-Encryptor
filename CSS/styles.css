@@ -93,8 +93,8 @@ body {
     resize: none;
     border-radius: 0.9375rem;
     font-family: var(--fuente-montserrat);
-    font-size: 2rem;
-    padding: 0.5rem;
+    font-size: 1.60rem;
+    padding: 15px;
     background-color: var(--color-fuente-letra);
 }
 
@@ -172,10 +172,18 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
+    overflow-y: auto;
     justify-content: space-evenly;
     gap: 1.25rem;
     color: var(--color-secundario);
 }
+
+.palabra-encriptada {
+    font-size: 1.60rem;
+    padding: 10px;
+}
+
 
 .img-output {
     width: 14.75rem;
